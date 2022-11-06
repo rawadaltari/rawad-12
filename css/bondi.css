@@ -1,0 +1,200 @@
+:root{
+    --dark-color: #19283f ;
+    --green-color: #33d1cc ;
+    --red-color: #ff3150 ;
+    --yellow-color: #ffc400 ;
+    --section-color: #eff7fa ;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+   
+    text-transform: capitalize;
+}
+.main-btn{
+    background-color: var(--red-color) ;
+    color: var(--yellow-color);
+    padding: 0.5rem 1rem;
+}
+.main-title::after{
+    content: '';
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translatex(-50%);
+}
+/* start navbar */
+.navbar{
+    background-color: var(--dark-color);
+   
+}
+.navbar .navbar-nav .nav-link{
+    color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover{
+    color: var(--green-color);
+}
+.navbar .search{
+    border-left:  1px solid var(--green-color);
+}
+.navbar .search svg{
+    color: var(--green-color);
+}
+.navbar .navbar-toggler{
+    color: white;
+    font-size: 25px;
+    border-color:white;
+}
+.navbar .navbar-toggler:focus{
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"]{
+    border-color:   var(--green-color);
+   
+}
+/* end navbar */
+/* start landing */
+.landing{
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 72px);
+}
+/* end landing */
+/* start feature */
+.features .icon-holder{
+    height: 200px;
+}
+.features .icon-holder svg{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.features .icon-holder .number{
+    font-size: 12rem;
+    color: var(--section-color);
+}
+.features .icon-holder .icon{
+    color: var(--green-color); 
+}
+.features .feat h4{
+    color: var(--yellow-color);
+}
+/* end feature */
+/* start gallery-section  */
+.gallery-section {
+    background-color: var(--section-color);
+}
+.gallery-section ul .active{
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+.gallery-section ul li{
+padding: 0.5rem 1rem;
+cursor: pointer;
+}
+.gallery-section ul li:not(.active):hover{
+color: var(--red-color);
+}
+.gallery-section .box{
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.gallery-section .box::before{
+    content: attr(data-work);
+    position:absolute;
+    background-color : rgb(51 209 204 / 76%);
+    width:  calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+     color:white;
+    transition: 0.3s;
+    font-size: 1.5rem;
+    transform: translateX(calc(-100% - 5px));
+}
+.gallery-section .box:hover::before{
+    transform: translateX(0); 
+}
+/* end gallery-section  */
+/* start stuff */
+.stuff .description{
+    max-width: 400px;
+}
+/* end stuff */
+/* start our-team */
+.our-team{
+    background-color: var(--section-color);   
+}
+.our-team h2{
+    color: var(--yellow-color);
+}
+.our-team h4{
+    background-color: var(--green-color);
+}
+/* end our-team */
+/* start project */
+.project{
+    background-color: var(--dark-color);
+}
+.project h2{
+    color: white;
+    font-size: 25px;
+}
+/* end project */
+/* start imag-section */
+.imag{
+    border: 3px solid var(--section-color);
+}
+/* end imag-section */
+/* start subscribe */
+.subscribe{
+    background-color: var(--yellow-color);
+}
+.subscribe input[type="text"]{
+    border: none;
+    border-bottom: 1px solid white ;
+}
+.subscribe input[type="text"]:focus{
+    outline: none;
+}
+.subscribe ::placeholder{
+    color: white;
+}
+.subscribe input[type="submit"]{
+   background-color: var(--dark-color);
+   color: var(--yellow-color);
+}
+/* end subscribe */
+/* start footer */
+.footer{
+    background-color: var(--dark-color);
+
+}
+.footer .copyright > span{
+    color: var(--yellow-color);
+}
+.footer .copyright div span{
+    color: var(--green-color);
+}
+.footer .contact ul svg {
+    width: 25px;
+    height: 25px;
+}
+.footer .facebook{
+    color: #4267B2;
+}
+.footer .twitter{
+    color: #1DA1F2;
+}
+.footer .linkedin{
+    color:  #0A66C2;
+}
+.footer .telegram{
+    color: #0088cc;
+}
+/* end footer */
